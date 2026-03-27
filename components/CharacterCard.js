@@ -17,11 +17,15 @@ export default function CharacterCard({ character, onPress }) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: "#d3bce6",
     padding: 10,
-    margin: 10,
+    marginStart: 30,
+    marginEnd: 30,
+    marginBottom: 10,
     borderRadius: 10,
-    elevation: 3
+    elevation: 5,
+    alignContent: 'center',
+    justifyContent:'center', 
   },
   image: {
     width: 120,

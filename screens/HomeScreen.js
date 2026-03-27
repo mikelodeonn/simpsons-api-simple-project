@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
       <Text style={styles.header}>Personajes de Los Simpsons</Text>
       <FlatList
         data={characters}
-        keyExtractor={(item) => item.id.toString()}
+        keyExtractor={(item) => item.id?.toString()}
         renderItem={({ item }) => (
           <CharacterCard
             character={item}
@@ -43,11 +43,17 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "#462c4a",
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 25,
   },
   header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    padding: 20
+    fontSize: 28,
+    fontWeight: '700',
+    padding: 20,
+    color: '#eeff07',
+    textAlign: 'center',
   }
 });

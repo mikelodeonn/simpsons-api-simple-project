@@ -21,7 +21,7 @@ export default function CharacterDetailScreen({ route }) {
     return <Text>Cargando...</Text>;
   }
 
-  const imageUrl = `https://thesimpsonsapi.com${character.portrait_path}`;
+  const imageUrl = `https://cdn.thesimpsonsapi.com/500${character.portrait_path}`;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -30,7 +30,7 @@ export default function CharacterDetailScreen({ route }) {
 
         <View style={styles.infoContainer}>
           <Text style={styles.title}>{character.name}</Text>
-          
+
           {character.age && <Text style={styles.info}>Edad: {character.age}</Text>}
           {character.birthdate && <Text style={styles.info}>Fecha de nacimiento: {character.birthdate}</Text>}
           {character.gender && <Text style={styles.info}>Género: {character.gender}</Text>}
@@ -53,7 +53,8 @@ export default function CharacterDetailScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20
+    padding: 40,
+    backgroundColor: "#462c4a",
   },
   image: {
     height: 250,
@@ -61,28 +62,33 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   infoContainer: {
-    marginTop: 10
+    marginTop: 10,
+    backgroundColor: "#d3bce6",
+    borderRadius: 12,
+    padding: 15,
   },
   title: {
     fontSize: 24,
-    fontWeight: "700"
+    fontWeight: "700",
+    color: '#eeff07',
   },
   info: {
     fontSize: 16,
     marginTop: 8,
-    color: "#444"
+    color: "#393939"
   },
   descriptionTitle: {
     fontSize: 18,
     fontWeight: "600",
     marginTop: 25,
-    marginBottom: 10
+    marginBottom: 10,
+    color: '#eeff07',
   },
   phrase: {
     fontSize: 15,
     lineHeight: 22,
     marginVertical: 4,
-    color: "#333",
+    color: "#323232",
     fontStyle: "italic"
   }
 });
