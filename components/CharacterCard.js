@@ -1,8 +1,8 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 
 export default function CharacterCard({ character, onPress }) {
-  const imageUrl = `https://thesimpsonsapi.com${character.portrait_path}`;
-
+  const imageUrl = `https://cdn.thesimpsonsapi.com/500${character.portrait_path}`;
+  console.log("IMAGE URL:", imageUrl);
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     elevation: 3
   },
   image: {
+    width: 120,
     height: 120,
     resizeMode: "contain"
   },
