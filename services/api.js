@@ -8,7 +8,7 @@ export const getCharacters = async () => {
         const characters = data.results || data; // Si no existe "results", usa el array directo
         console.log(`✅ Personajes extraídos: ${characters.length}`);
 
-        return data;
+        return characters;
     } catch (error) {
         console.error("Error fetching characters: ", error);
         return [];

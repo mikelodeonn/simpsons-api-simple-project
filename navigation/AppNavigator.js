@@ -14,7 +14,7 @@ export default function AppNavigator() {
                     component={HomeScreen}
                 />
                 <Stack.Screen
-                    name="Details"
+                    name="Detail"
                     component={CharacterDetailScreen}
                 />            
             </Stack.Navigator>
